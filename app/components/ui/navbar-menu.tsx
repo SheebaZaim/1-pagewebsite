@@ -3,9 +3,11 @@ import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
+import { LinkProps } from "next/link";
+
 
 const transition = {
-  type: "spring",
+  type: "string",
   mass: 0.5,
   damping: 11.5,
   stiffness: 100,
@@ -110,8 +112,10 @@ export const ProductItem = ({
     </Link>
   );
 };
-
-export const HoveredLink = ({ children, ...rest }: any) => {
+interface HoveredLinkProps extends LinkProps {
+  children: React.ReactNode; // Define the type for children
+}
+export const HoveredLink = ({children, ...rest}: HoveredLinkProps) => {
   return (
     <Link
       {...rest}

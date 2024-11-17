@@ -1,4 +1,4 @@
-import Image from "next/image";
+
 import React from "react";
 import HeroSection from "./components/HeroSection";
 import FeaturedCourses from "./components/FeaturedCourses";
